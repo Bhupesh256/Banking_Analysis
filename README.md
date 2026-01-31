@@ -70,8 +70,9 @@ Data ➡️ MySQL ➡️ Data Cleaning & Preparation ➡️ EDA ➡️ Power BI 
 ## 🚀 Tools & Technologies
 
 - **Database**: MySQL
+- **Exploratory Data Analysis(EDA)**: Jupyter NoteBook,Pandas,Seaborn & Matplotlib
 - **Visualization**: Power BI
-- **Languages**: SQL, DAX (in Power BI)
+- **Languages**: SQL, DAX (in Power BI),Python
 
 ---
 
