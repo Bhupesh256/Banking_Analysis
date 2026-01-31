@@ -1,139 +1,112 @@
-## 📌 Project Overview
+# 🏦 Banking Dashboard - End-to-End Data Analysis Project
 
-This project delivers a complete banking analytics solution — starting from raw SQL data, moving through Excel-based cleaning, Python-based EDA, and finally a full interactive Power BI dashboard.
-The goal was to analyze client behavior, loan & deposit distribution, demographic patterns, relationship insights, and overall banking performance across multiple years.
+This project focuses on building an interactive **Banking Dashboard** using Power BI. It involves the complete data analysis lifecycle — from data cleaning and transformation to exploratory data analysis (EDA) and visualization.
 
-The dashboard includes Home, Loan Analysis, Deposit Analysis, and Summary pages with dynamic filtering and key financial KPIs.
+---
 
-## 📊 Features & Highlights
+## 📌 Project Workflow
 
-🔹 **Core Banking Metrics**
+Data ➡️ MySQL ➡️ Data Cleaning & Preparation ➡️ EDA ➡️ Power BI Dashboard
 
-  ➤Total Clients
+---
 
-  ➤Total Loan
+## 📊 Dataset Information
 
-  ➤Bank Loan
+- **Number of columns**: 24
+- **Stored in**: MySQL
 
-  ➤Business Lending
+---
 
-  ➤Total Deposit
+## 🔧 Steps Involved
 
-  ➤Savings & Checking Accounts
+### 1. Data Cleaning & Preparation
 
-  ➤Total Fees
+- Categorized `Income` into bands:
+  - `Low`
+  - `Mid`
+  - `High`
+- Standardized gender, nationality, and other categorical variables.
+- Used conditional columns in Power BI to create income bands.
+- Replaced branch codes (`'1'`, `'2'`, etc.) with readable branch names.
+- Mapped gender codes:
+  - `'1'` → `Male`
+  - `'2'` → `Female`
 
-  ➤Credit Card Amount
+---
 
-  ➤Foreign Currency Amount
+### 2. Exploratory Data Analysis (EDA)
 
-  ➤Engagement Accounts
+- Categorical analysis on:
+  - Gender
+  - Nationality
+- Numerical analysis on:
+  - Credit Card Balance
+  - Bank Loans
+  - Bank Deposits
+  - Checking Account
+  - Saving Account
+  - Estimated Income
+  - Superannuation Savings
 
-🔹 **Loan & Deposit Insights**
+---
 
-   ◆By Banking Relationship
+### 3. Key Insights from EDA
 
-   ◆By Gender
+- Strong positive correlation between:
+  - `Bank Deposits`, `Checking Account`, `Saving Account`, and `Foreign Currency Account`.
+- Customers with high balance in one account type tend to hold substantial funds in other accounts as well.
 
-   ◆By Investment Advisor
+---
 
-   ◆By Income Band
+## 📈 Dashboard Pages (Power BI)
 
-   ◆By Nationality
+1. **Home**
+2. **Loan Analysis**
+3. **Deposit Analysis**
+4. **Summary**
 
-   ◆By Occupation
+---
 
-   ◆Year-wise comparison (2016–2021)
+## 🚀 Tools & Technologies
 
-🔹 **Dashboard Structure**
+- **Database**: MySQL
+- **Visualization**: Power BI
+- **Languages**: SQL, DAX (in Power BI)
 
-  1. Home Page: High-level KPIs & navigation
+---
 
-  2. Loan Analysis Page: Distribution of different loan types and demographic analysis
+## 🧠 Learnings
 
-  3. Deposit Analysis Page: Savings, checking, deposit breakdowns
+- Data wrangling using SQL
+- Power BI conditional columns
+- Deriving insights through EDA
+- Building multi-page dashboards for presentation
 
-  4.  Summary Page: Consolidated KPIs and filters for quick insights
+---
+### ✅ Page 1: Home  
+> Overview of the banking data with summary statistics and key visuals.  
 
-## 🛠 Tech Stack
+<img width="1754" height="984" alt="Screenshot 2026-01-31 200945" src="https://github.com/user-attachments/assets/9bb685b0-69c3-47b7-86dc-e96a7271bcae" />
 
-### 1. Excel ➜
 
-   ●Data cleaning
+---
 
-   ●Initial data profiling
+### ✅ Page 2: Loan Analysis  
+> Insights into loan distribution, types, and customer segments.  
+<img width="1757" height="983" alt="Screenshot 2026-01-31 201011" src="https://github.com/user-attachments/assets/84c15e55-7c17-4a25-99e5-330e312e4ba0" />
 
-   ●Formatting and preprocessing
 
-### 2. Python ➜
+---
 
-  ● Exploratory Data Analysis
+### ✅ Page 3: Deposit Analysis  
+> Breakdown of account balances, deposit types, and correlation patterns.  
 
-  ● MySQL database connection
+<img width="1377" height="766" alt="Screenshot 2026-01-31 201031" src="https://github.com/user-attachments/assets/65210c9d-47a5-480d-a361-52f649cfae84" />
 
-  ● Pandas for data manipulation
 
-  ● Matplotlib & Seaborn for visual checks
+---
 
-  ● Validation of the full 3000-row customer dataset
+### ✅ Page 4: Summary  
+> Final insights from EDA, including correlations and demographic trends.  
 
-### 3. Power BI ➜
-
-  ● Final automated dashboard
-
-  ● DAX measures & calculated columns
-
-  ● Multi-page report navigation
-
-  ● Slicers: Banking Relationship, Gender, Advisor, Year
-
-  ● KPI cards, treemaps, donut charts, bar charts
-
-## 📁 Project Workflow
-
-→ Extract Data from MySQL
-
-→ Clean & Format Data in Excel
-
-→ EDA in Python to validate distribution, missing values, and anomalies
-
-→ Load Clean Data into Power BI
-
-→ Build Measures & Visuals using DAX
-
-→ Design Interactive Pages
-
-→ Publish final dashboard (screenshots included in repo)
-
-## 📸 Screenshots
-
-<img width="1309" height="729" alt="Screenshot 2025-11-20 231540" src="https://github.com/user-attachments/assets/80d863b8-bd1c-4f67-aac5-629a6eb697a7" />
-<img width="1306" height="724" alt="Screenshot 2025-11-20 231942" src="https://github.com/user-attachments/assets/c6fb10a3-a034-4f81-8a3e-9a4a95b09d73" />
-<img width="1302" height="722" alt="Screenshot 2025-11-20 232019" src="https://github.com/user-attachments/assets/2492835f-105a-45d0-932b-649dc1f02c25" />
-<img width="1306" height="719" alt="Screenshot 2025-11-20 232116" src="https://github.com/user-attachments/assets/9d3c91da-a7e7-41cf-8b85-ad70ee0b13bd" />
-
-## 🚀 How to Use
-
-✦Clone the repository
-
-✦Open the Jupyter/Python file to explore EDA
-
-✦Open the Power BI .pbix file to view the full dashboard
-
-✦Load your own dataset (optional) to experiment with filters & visuals
-
-## 📈 Learnings / Takeaways
-
-1) Building a full BI workflow from SQL → Excel → Python → Power BI
-
-2) Importance of clean dimensional modeling
-
-3) Optimizing DAX performance for interactive dashboards
-
-4) Enhancing visual storytelling for financial analytics
-
-## 📬 Contact
-
-If you'd like to discuss analytics, BI projects, or dashboard design, feel free to reach out.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/bhupesh-panigrahi-347529223)
+<img width="1370" height="767" alt="Screenshot 2026-01-31 201059" src="https://github.com/user-attachments/assets/6f216de5-5664-4d1a-b111-e3f7806f7b44" />
